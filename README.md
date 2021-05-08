@@ -3,4 +3,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/ff85f8e280da46e9b0c4/maintainability)](https://codeclimate.com/github/ArtemMalafeev/frontend-project-lvl1/maintainability)
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![Node.js CI](https://github.com/ArtemMalafeev/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/ArtemMalafeev/frontend-project-lvl1/actions/workflows/nodejs.yml)
