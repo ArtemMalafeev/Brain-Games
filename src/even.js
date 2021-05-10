@@ -12,7 +12,7 @@ const playGame = () => {
   const regulations = 'Answer "yes" if the number is even, otherwise answer "no".';
   console.log(regulations);
 
-  const MAX_NUMBER = 1000;
+  const MAX_NUMBER = 100;
   let roundCount = 3;
 
   while (roundCount > 0) {
