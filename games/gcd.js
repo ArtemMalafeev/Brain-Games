@@ -12,7 +12,7 @@ const findGcd = (operand1, operand2) => {
   return findGcd(operand2, operand1 % operand2);
 };
 
-const description = 'Find the greatest common divisor of given numbers.';
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 const getData = () => {
   const operands = cons(randomNumber(), randomNumber());
@@ -22,4 +22,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-export default () => play(description, getData);
+export default () => play(DESCRIPTION, getData);

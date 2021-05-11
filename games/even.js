@@ -3,7 +3,7 @@ import randomNumber from '../src/getRandom.js';
 
 const isEven = (number) => number % 2 === 0;
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getData = () => {
   const question = randomNumber();
@@ -12,4 +12,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-export default () => play(description, getData);
+export default () => play(DESCRIPTION, getData);

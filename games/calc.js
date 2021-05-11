@@ -5,7 +5,7 @@ import _ from 'lodash';
 import play from '../src/index.js';
 import randomNumber from '../src/getRandom.js';
 
-const description = 'What is the result of the expression?';
+const DESCRIPTION = 'What is the result of the expression?';
 
 const calculate = (operands, operator) => {
   switch (operator) {
@@ -31,4 +31,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-export default () => play(description, getData);
+export default () => play(DESCRIPTION, getData);
