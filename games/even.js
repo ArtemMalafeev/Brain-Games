@@ -1,5 +1,4 @@
 import play from '../src/index.js';
-
 import randomNumber from '../src/getRandom.js';
 
 const isEven = (number) => number % 2 === 0;
