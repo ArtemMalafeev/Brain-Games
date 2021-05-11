@@ -1,10 +1,11 @@
-import readlineSync from 'readline-sync';
 import {
   cons, car, cdr,
 } from '@hexlet/pairs';
 import _ from 'lodash';
+import play from '../src/index.js';
+import randomNumber from '../src/getRandom.js';
 
-const getRandomInt = (max) => Math.floor(Math.random() * max);
+const description = 'What is the result of the expression?';
 
 const calculate = (operands, operator) => {
   switch (operator) {
@@ -19,38 +20,15 @@ const calculate = (operands, operator) => {
   }
 };
 
-const playGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+const OPERATIONS = ['+', '-', '*'];
 
-  const regulations = 'What is the result of the expression?';
-  console.log(regulations);
+const getData = () => {
+  const operands = cons(randomNumber(), randomNumber());
+  const operation = _.sample(OPERATIONS);
+  const question = `Question: ${car(operands)} ${operation} ${cdr(operands)}`;
+  const correctAnswer = String(calculate(operands, operation));
 
-  const MAX_NUMBER = 100;
-  let roundCount = 3;
-  const OPERATIONS = ['+', '-', '*'];
-
-  while (roundCount > 0) {
-    const operands = cons(getRandomInt(MAX_NUMBER), getRandomInt(MAX_NUMBER));
-    const operation = _.sample(OPERATIONS);
-
-    const question = `Question: ${car(operands)} ${operation} ${cdr(operands)}`;
-    console.log(question);
-
-    const correctAnswer = String(calculate(operands, operation));
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    if (correctAnswer !== userAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      return;
-    }
-
-    console.log('Correct!');
-    roundCount -= 1;
-  }
-
-  console.log(`Congratulations, ${name}`);
+  return [question, correctAnswer];
 };
 
-export default playGame;
+export default () => play(description, getData);

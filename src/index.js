@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const play = (description, data) => {
+export default (description, data) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
@@ -11,7 +11,7 @@ const play = (description, data) => {
 
   const iter = (rounds) => {
     if (rounds === 0) {
-      console.log(`\nCongratulations, ${name}`);
+      console.log(`\nCongratulations, ${name}!`);
       return;
     }
 
@@ -32,5 +32,3 @@ const play = (description, data) => {
 
   iter(ROUND_COUNTS);
 };
-
-export default play;
