@@ -21,7 +21,7 @@ export default (description, data) => {
 
     if (trueAnswer !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
