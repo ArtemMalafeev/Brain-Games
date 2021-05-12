@@ -16,7 +16,7 @@ export default (description, data) => {
     }
 
     const [question, trueAnswer] = data();
-    console.log(`Questions: ${question}`);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (trueAnswer !== userAnswer) {
