@@ -25,7 +25,7 @@ const generateQuestion = (missingElement, progression) => {
 
   for (let index = 0; index < progression.length; index += 1) {
     if (index === missingElement) {
-      question.push('...');
+      question.push('..');
     } else {
       question.push(progression[index]);
     }
