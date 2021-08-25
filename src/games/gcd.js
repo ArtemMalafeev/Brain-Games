@@ -1,4 +1,4 @@
-import startGameController from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../getRandom.js';
 
 const findGcd = (operand1, operand2) => {
@@ -20,4 +20,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-export default () => startGameController(DESCRIPTION, getData);
+export default () => startGame(DESCRIPTION, getData);

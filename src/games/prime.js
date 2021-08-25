@@ -1,4 +1,4 @@
-import startGameController from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../getRandom.js';
 
 const isPrime = (number) => {
@@ -24,4 +24,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-export default () => startGameController(DESCRIPTION, getData);
+export default () => startGame(DESCRIPTION, getData);

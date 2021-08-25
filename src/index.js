@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const ROUND_COUNTS = 3;
+const ROUNDS_COUNT = 3;
 
 export default (description, getData) => {
   console.log('Welcome to the Brain Games!');
@@ -9,8 +9,8 @@ export default (description, getData) => {
 
   console.log(description);
 
-  const iter = (rounds) => {
-    if (rounds === 0) {
+  const iter = (round) => {
+    if (round === 0) {
       console.log(`\nCongratulations, ${name}!`);
       return;
     }
@@ -27,8 +27,8 @@ export default (description, getData) => {
 
     console.log('Correct!');
 
-    iter(rounds - 1);
+    iter(round - 1);
   };
 
-  iter(ROUND_COUNTS);
+  iter(ROUNDS_COUNT);
 };

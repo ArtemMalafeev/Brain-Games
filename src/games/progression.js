@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandom.js';
-import startGameController from '../index.js';
+import startGame from '../index.js';
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
@@ -46,4 +46,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-export default () => startGameController(DESCRIPTION, getData);
+export default () => startGame(DESCRIPTION, getData);
